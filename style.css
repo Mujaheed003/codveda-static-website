@@ -1,0 +1,416 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  background: #00c4cc;
+  padding: 15px 10%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.logo span {
+  color: #0a0a23;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #0a0a23;
+}
+
+/* Hero */
+
+/* Hero Section - Shared Styles */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+h2 {
+  color: #007b7f;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.hero .btn {
+  background: #007b7f;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 1s ease-in-out;
+}
+
+.hero .btn:hover {
+  background: #00c4cc;
+  color: #005f61;
+}
+
+/* Home Hero Background */
+.hero {
+  background: url("img/B2.webp") no-repeat center center,
+    linear-gradient(to right, #00c4cc, #007b7f);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* About Hero Background */
+.about-hero {
+  background: url("img/bck2.png") no-repeat center center,
+    linear-gradient(120deg, #00c4cc 60%, #007b7f 100%);
+  background-size: cover;
+}
+
+/* Contact Hero Background */
+.contact-hero {
+  background: url("img/bck.png") no-repeat center center,
+    linear-gradient(120deg, #007b7f 60%, #00c4cc 100%);
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-text {
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 220px;
+    padding: 30px 5px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Services */
+.services {
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.service-row {
+  margin-top: 20px;
+}
+
+.service-row .card {
+  display: inline-block;
+  width: 240px;
+  background: #f4f4f4;
+  padding: 10px 7px;
+  border-radius: 8px;
+  margin: 10px 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card figure {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background: #007b7f;
+  padding: 5px 7px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 1s;
+  color: #fff;
+}
+
+.card button:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  background: #00c4cc;
+  color: #005f61;
+}
+
+/* About & Contact */
+.about,
+.mission,
+.values,
+.contact {
+  padding: 10px 10%;
+  margin: auto;
+}
+
+.hero h1 span,
+.about-hero h1 {
+  color: #00c4cc;
+}
+
+.about h1,
+.mission h2,
+.values h2,
+.contact h1 {
+  margin-top: 15px;
+  color: #007b7f;
+}
+
+.why {
+  text-align: center;
+  padding: 10% 10%;
+}
+
+.why-col {
+  display: inline-block;
+  vertical-align: top;
+  width: 29%;
+  margin: 1%;
+  /* background: #f4f4f4; */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px 10px;
+  min-height: 200px;
+}
+
+.why-col h2 {
+  color: #007b7f;
+  margin-bottom: 10px;
+}
+
+.why-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-col li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .why-col {
+    width: 100%;
+    display: block;
+    margin: 15px 0;
+  }
+}
+
+.values {
+  margin-top: 10px;
+}
+
+.values ul,
+.why ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values li,
+.why li {
+  margin-bottom: 10px;
+}
+
+.values div {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin: 1%;
+}
+
+.values div:last-child {
+  width: 48%;
+}
+
+/* Contact Form */
+.contact {
+  margin-top: -10px;
+}
+
+.info {
+  margin-top: 30px;
+}
+
+.info b {
+  color: #005f61;
+}
+.contact h1 {
+  color: #00c4cc;
+}
+
+.contact-inline {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin: 1%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin: 15px 0;
+  outline: 0;
+}
+
+.contact-form button {
+  background: #007b7f;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  outline: 0;
+  transition: all 1s;
+}
+
+.contact-form button:hover {
+  background: #00c4cc;
+  color: #005f61;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #00c4cc;
+  color: #0a0a23;
+  padding: 15px;
+  margin-top: 30px;
+  height: 100px;
+}
+
+footer p {
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 1300px) {
+  .hero-text {
+    /* padding: 10%; */
+    margin-left: 300px;
+    margin-top: 30px;
+    /* width: 100%; */
+  }
+}
+
+@media (max-width: 1224px) {
+  .hero-text {
+    margin-left: 200px;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .service-row .card {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .values div {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .contact-inline {
+    display: block;
+    width: 100%;
+  }
+  .contact-form textarea {
+    height: 100px;
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+}
